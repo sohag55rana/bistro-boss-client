@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "1",
+        "title": "Grilled Chicken",
+        "description": "Juicy grilled chicken with herbs and garlic sauce.",
+        "image": "https://i.ibb.co.com/Wvn4twVG/pizza-bg.jpg"
+    },
+    {
+        "_id": "2",
+        "title": "Pasta Alfredo",
+        "description": "Creamy Alfredo pasta with parmesan cheese and mushrooms.",
+        "image": "https://i.ibb.co.com/rKQ2zTGS/salad-bg.jpg"
+    },
+    {
+        "_id": "3",
+        "title": "Veggie Soups",
+        "description": "Healthy veggie burger with fresh lettuce and tomato.",
+        "image": "https://i.ibb.co.com/LdCptJ5B/soup-bg.jpg"
+    }
+]
