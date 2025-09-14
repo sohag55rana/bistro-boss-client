@@ -4,10 +4,10 @@ import Cover from "../../sheard/cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
-import useMenu from "../../../useHook/useMenu/useMenu";
 import FoodCard from "../../../components/foodCard/FoodCard";
 import OrderTab from "../orderTab/OrderTab";
 import { useParams } from "react-router-dom";
+import useMenu from "../../../hooks/useMenu";
 
 
 const Order = () => {
@@ -16,9 +16,10 @@ const Order = () => {
     const categories = ['salad', 'pizza', 'soup', 'dessert', 'drinks']
     const { category } = useParams()
     const initialValue = categories.indexOf(category)
+    const safeIndex = initialValue === -1 ? 0 : initialValue
     // --------------------
     const [menu] = useMenu()
-    const [tabIndex, setTabIndex] = useState(initialValue)
+    const [tabIndex, setTabIndex] = useState(safeIndex)
 
     const salad = menu.filter(item => item.category === "salad")
     const dessert = menu.filter(item => item.category === "dessert")

@@ -1,6 +1,5 @@
 import useTitle from "../../../useHook/useTitle/useTitle";
 import Cover from "../../sheard/cover/Cover";
-import useMenu from "../../../useHook/useMenu/useMenu";
 import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 import MenuCategory from "../menuCategory/MenuCategory";
 import coverImg1 from "../../../assets/menu/banner3.jpg"
@@ -8,6 +7,7 @@ import coverImg2 from "../../../assets/menu/dessert-bg.jpeg"
 import coverImg3 from "../../../assets/menu/pizza-bg.jpg"
 import coverImg4 from "../../../assets/menu/salad-bg.jpg"
 import coverImg5 from "../../../assets/menu/soup-bg.jpg"
+import useMenu from "../../../hooks/useMenu";
 
 const Menu = () => {
     useTitle("Bistro Boss | Menu");

@@ -11,7 +11,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch("reviews.json")
+        fetch("http://localhost:5000/reviews")
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -19,7 +19,7 @@ const Testimonials = () => {
         <div className="my-20">
             <SectionTitle subHeading={"What Our Client Say"} heading={"Testimonials"}></SectionTitle>
 
-            <Swiper navigation={true} loop={true} modules={[Pagination, Navigation]} className="mySwiper">
+            <Swiper navigation={true} loop={reviews.length > 1} modules={[Pagination, Navigation]} className="mySwiper">
                 {reviews.map(review => <SwiperSlide key={review._id}>
                     <div className="my-8 text-center flex flex-col items-center mx-24">
                         <RiDoubleQuotesL className="text-7xl"></RiDoubleQuotesL>
